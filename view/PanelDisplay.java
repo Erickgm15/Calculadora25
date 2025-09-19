@@ -26,4 +26,8 @@ public class PanelDisplay extends JPanel {
     public void limpiar() {
         display.setText("");
     }
+
+    public void setValor(double valor) {
+        display.setText(String.format("%.2f", valor));
+    }
 }
