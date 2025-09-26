@@ -3,7 +3,7 @@ package module;
 import javax.swing.*;
 import java.awt.*;
 import view.PanelDisplay;
-import operaciones.ConversionUnidades;
+import control.ConversionUnidades;
 
 public class ConversionUnidadesView extends JPanel {
 
@@ -11,14 +11,14 @@ public class ConversionUnidadesView extends JPanel {
     private JTextField txtValor;
     private JButton btnConvert;
     private PanelDisplay display;
-    private ConversionUnidades operaciones; // instancia de tu clase
+    private ConversionUnidades operaciones; 
 
     public ConversionUnidadesView() {
         operaciones = new ConversionUnidades();
 
         setLayout(new BorderLayout(6,6));
 
-        // Panel superior con combo y campo
+        // Panel  
         JPanel top = new JPanel(new FlowLayout());
         cbTipo = new JComboBox<>(new String[] {"m → km", "km → m", "g → kg", "kg → g"});
         txtValor = new JTextField(8);

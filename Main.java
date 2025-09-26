@@ -1,21 +1,18 @@
-import java.awt.BorderLayout;
 import javax.swing.*;
- import view.Dashboard;
+import view.Dashboard;
+
 public class Main {
-
     public static void main(String[] args) {
-        JFrame miVentana = new JFrame(); 
-        miVentana.setTitle(" Calculadora"); 
-        miVentana.setSize(1000, 800); 
-        miVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        miVentana.setLayout(new BorderLayout());
-        miVentana.setLocationRelativeTo(null);
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Calculadora");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(1000, 800);
+            frame.setLocationRelativeTo(null);
 
-        Dashboard dashboard = new Dashboard();
-        miVentana.add(dashboard, BorderLayout.CENTER);
+            
+            frame.add(new Dashboard());
 
-
-
-        miVentana.setVisible(true);
+            frame.setVisible(true);
+        });
     }
 }

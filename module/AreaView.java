@@ -3,7 +3,7 @@ package module;
 import javax.swing.*;
 import java.awt.*;
 import view.PanelDisplay;
-import operaciones.Area;
+import control.Area;
 
 public class AreaView extends JPanel {
 
@@ -37,7 +37,7 @@ public class AreaView extends JPanel {
         add(botones, BorderLayout.SOUTH);
     }
 
-    // Método genérico de cálculo
+    // Método
     private void calcular(String tipo) {
         double resultado = 0;
 

@@ -1,4 +1,4 @@
-package operaciones;
+package control;
 
 public class calculadoraBasica {
 
